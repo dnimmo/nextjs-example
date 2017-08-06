@@ -1,14 +1,15 @@
 import BannerButton from './banner_button'
+import nextConnect, { loggedIn } from '../../state/store'
 
 const banner = 
-  () => (
+  ({loggedIn}) => (
     <div className='banner'>
       <h1>Do something. Do something else. Do a third thing.</h1>
       <span>Here is a bit of text that clarifies the bit of text above.</span>
       <div>
         <BannerButton 
           link='/sign-up' 
-          text='Sign in!'
+          text={ loggedIn ? 'Sign out :(' : 'Sign in!' }
         />
         
         <BannerButton 
@@ -19,4 +20,4 @@ const banner =
     </div>
   )
 
-export default banner
+export default nextConnect(({loggedIn}) => ({loggedIn}))(banner)
