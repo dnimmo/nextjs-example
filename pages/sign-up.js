@@ -4,18 +4,21 @@ import PageHead from '../components/common/page_head'
 import Header from '../components/common/header'
 import Footer from '../components/common/footer'
 import nextConnect, { logIn } from '../state/store'
+import LogInComponent from '../components/sign_up/log_in'
+import LogOutComponent from '../components/sign_up/log_out'
 
 const page = 
-  (props) => (
+  ({logIn, loggedIn}) => (
     <div>
       <PageHead pageTitle='Sign-up Page'></PageHead>
       <Header pageTitle='NextJS Example - Sign-up'></Header>
       <main className='content'>
         <h1>Sign up!</h1>
 
-        <p>Or don't, because I'm not making a sign-up page for a demo site. Instead, hit the thing below this text to pretend you've signed in.</p>
-
-        <span onClick={props.logIn} className='button'>Log in</span>
+        { loggedIn
+          ? <LogOutComponent/>
+          : <LogInComponent/>
+        }
       </main>
       <Footer></Footer>
     </div>

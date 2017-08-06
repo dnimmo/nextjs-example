@@ -7,7 +7,7 @@ const navigation =
       <Link href='/index'><a>Home</a></Link>
       <Link href='/about'><a>About</a></Link>
       { loggedIn 
-        ? <Link href='/index'><a>Log out</a></Link>
+        ? <Link href='/sign-up'><a>Log out</a></Link>
         : <Link href='/sign-up'><a>Sign up/in</a></Link>
       }
       <Link href='/book-demo'><a>Book a demo</a></Link>
