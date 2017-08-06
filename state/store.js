@@ -1,6 +1,7 @@
 import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunkMiddleware from 'redux-thunk'
+import nextConnectRedux from 'next-connect-redux'
 
 const startingState = {
   loggedIn: false
@@ -8,7 +9,7 @@ const startingState = {
 
 export const actionTypes = {
   LOG_IN: 'LOG_IN',
-  LOG_OUT: 'LOG_OUT'
+  LOG_OUT: 'LOG_OUT',
 }
 
 export const reducer = 
@@ -37,3 +38,6 @@ export const initialStore =
       composeWithDevTools(applyMiddleware(thinkMiddleware))
     )
   )
+
+export default nextConnectRedux(initialStore)
+
