@@ -1,0 +1,22 @@
+import BannerButton from './banner_button'
+
+const banner = 
+  () => (
+    <div className='banner'>
+      <h1>Do something. Do something else. Do a third thing.</h1>
+      <span>Here is a bit of text that clarifies the bit of text above.</span>
+      <div>
+        <BannerButton 
+          link='/sign-up' 
+          text='Sign in!'
+        />
+        
+        <BannerButton 
+          link='/book-demo' 
+          text='Look at this!'
+        />
+      </div>
+    </div>
+  )
+
+export default banner

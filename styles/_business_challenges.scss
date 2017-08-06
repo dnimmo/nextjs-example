@@ -1,0 +1,12 @@
+.businessChallenges {
+  font-size: 18px;
+  padding: 100px;
+}
+
+.challengeItem {
+  @include bp(l) {
+    display: inline-block;
+    max-width: 30vw;
+    margin: 20px;
+  }
+}
