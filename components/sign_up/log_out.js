@@ -10,4 +10,4 @@ const logOutComponent =
     </div>
   )
 
-export default nextConnect(state => ({}), dispatch => bindActionCreators({logIn}, dispatch))(logOutComponent)
+export default nextConnect(state => ({}), dispatch => bindActionCreators({logOut}, dispatch))(logOutComponent)
