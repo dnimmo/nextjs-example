@@ -1,13 +1,17 @@
 import Link from 'next/link'
+import nextConnect from '../../state/store'
 
 const navigation = 
-  () => (
+  ({loggedIn}) => (
     <nav className='siteNavigation'>
-      <Link href='/index'>Home</Link>
-      <Link href='/about'>About</Link>
-      <Link href='/sign-up'>Sign up/in</Link>
-      <Link href='/book-demo'>Book a demo</Link>
+      <Link href='/index'><a>Home</a></Link>
+      <Link href='/about'><a>About</a></Link>
+      { loggedIn 
+        ? <Link href='/index'><a>Log out</a></Link>
+        : <Link href='/sign-up'><a>Sign up/in</a></Link>
+      }
+      <Link href='/book-demo'><a>Book a demo</a></Link>
     </nav>
   )
 
-export default navigation
+export default nextConnect(({loggedIn}) => ({loggedIn}))(navigation)

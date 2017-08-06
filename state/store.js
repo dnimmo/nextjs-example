@@ -25,17 +25,17 @@ export const reducer =
   }
 
 export const logIn =
-  () => dispatch({ type: actionTypes.LOG_IN })
+  () => ({ type: actionTypes.LOG_IN })
 
 export const logOut =
-  () => dispatch({ type: actionTypes.LOG_OUT })
+  () => ({ type: actionTypes.LOG_OUT })
 
 export const initialStore = 
   (initialState = startingState) => (
     createStore(
       reducer, 
       initialState, 
-      composeWithDevTools(applyMiddleware(thinkMiddleware))
+      composeWithDevTools(applyMiddleware(thunkMiddleware))
     )
   )
 
