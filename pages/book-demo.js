@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import PageHead from '../components/common/page_head'
+import PageHead from '../components/common/pageHead'
 import Header from '../components/common/header'
 import Footer from '../components/common/footer'
 

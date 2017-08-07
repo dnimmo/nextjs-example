@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import { bindActionCreators } from 'redux'
-import PageHead from '../components/common/page_head'
+import PageHead from '../components/common/pageHead'
 import Header from '../components/common/header'
 import Footer from '../components/common/footer'
 import nextConnect, { loggedIn } from '../state/store'
-import LogInComponent from '../components/sign_up/log_in'
-import LogOutComponent from '../components/sign_up/log_out'
+import LogInComponent from '../components/sign_up/logIn'
+import LogOutComponent from '../components/sign_up/logOut'
 
 const renderComponents =
   loggedIn => (
