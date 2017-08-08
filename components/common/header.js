@@ -1,19 +1,19 @@
-import ReactDOM from 'react-dom'
-import Link from 'next/link'
-import Navigation from './Navigation'
+import React from 'react';
+import Link from 'next/link';
+import Navigation from './Navigation';
 
-const header = 
+const header =
   () => (
     <div>
       <header>
-        <Link href='/index'>
-          <a className='logo' >
+        <Link href="/index">
+          <a className="logo" >
             Logo goes here
           </a>
         </Link>
       </header>
-      <Navigation/>
+      <Navigation />
     </div>
-  )
+  );
 
-export default header
+export default header;

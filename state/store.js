@@ -1,56 +1,56 @@
-import { createStore, applyMiddleware } from 'redux'
-import { composeWithDevTools } from 'redux-devtools-extension'
-import thunkMiddleware from 'redux-thunk'
-import nextConnectRedux from 'next-connect-redux'
+import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import thunkMiddleware from 'redux-thunk';
+import nextConnectRedux from 'next-connect-redux';
 
 const startingState = {
   loggedIn: false,
-  navigationOpen: false
-}
+  navigationOpen: false,
+};
 
 export const actionTypes = {
   LOG_IN: 'LOG_IN',
   LOG_OUT: 'LOG_OUT',
   OPEN_NAVIGATION: 'OPEN_NAVIGATION',
-  CLOSE_NAVIGATION: 'CLOSE_NAVIGATION'
-}
+  CLOSE_NAVIGATION: 'CLOSE_NAVIGATION',
+};
 
-export const reducer = 
+export const reducer =
   (state = startingState, action) => {
     switch (action.type) {
       case actionTypes.LOG_IN:
-        return { ...state, loggedIn: true }
+        return { ...state, loggedIn: true };
       case actionTypes.LOG_OUT:
-        return { ...state, loggedIn: false }
+        return { ...state, loggedIn: false };
       case actionTypes.OPEN_NAVIGATION:
-        return { ...state, navigationOpen: true }
+        return { ...state, navigationOpen: true };
       case actionTypes.CLOSE_NAVIGATION:
-        return { ...state, navigationOpen: false }
+        return { ...state, navigationOpen: false };
       default:
-        return state
+        return state;
     }
-  }
+  };
 
 export const logIn =
-  () => ({ type: actionTypes.LOG_IN })
+  () => ({ type: actionTypes.LOG_IN });
 
 export const logOut =
-  () => ({ type: actionTypes.LOG_OUT })
+  () => ({ type: actionTypes.LOG_OUT });
 
 export const openNav =
-  () => ({ type: actionTypes.OPEN_NAVIGATION })
+  () => ({ type: actionTypes.OPEN_NAVIGATION });
 
 export const closeNav =
-  () => ({ type: actionTypes.CLOSE_NAVIGATION })
+  () => ({ type: actionTypes.CLOSE_NAVIGATION });
 
-export const initialStore = 
+export const initialStore =
   (initialState = startingState) => (
     createStore(
-      reducer, 
-      initialState, 
-      composeWithDevTools(applyMiddleware(thunkMiddleware))
+      reducer,
+      initialState,
+      composeWithDevTools(applyMiddleware(thunkMiddleware)),
     )
-  )
+  );
 
-export default nextConnectRedux(initialStore)
+export default nextConnectRedux(initialStore);
 

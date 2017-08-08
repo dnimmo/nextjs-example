@@ -1,10 +1,10 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
-const bannerButton = 
-  ({text, link}) => (
+const bannerButton =
+  ({ text, link }) => (
     <Link href={link}>
-      <a className='button'>{text}</a>
+      <a className="button">{text}</a>
     </Link>
-  )
+  );
 
-export default bannerButton
+export default bannerButton;
