@@ -1,10 +1,10 @@
 import Link from 'next/link'
-import PageHead from '../components/common/pageHead'
-import Header from '../components/common/header'
-import Banner from '../components/homepage/banner'
-import Challenges from '../components/homepage/businessChallenges'
-import Features from '../components/homepage/productFeatures'
-import Footer from '../components/common/footer'
+import PageHead from '../components/common/PageHead'
+import Header from '../components/common/Header'
+import Banner from '../components/homepage/Banner'
+import Challenges from '../components/homepage/BusinessChallenges'
+import Features from '../components/homepage/ProductFeatures'
+import Footer from '../components/common/Footer'
 
 const page = 
   () => (

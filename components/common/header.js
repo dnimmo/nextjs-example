@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom'
 import Link from 'next/link'
-import Navigation from './navigation'
+import Navigation from './Navigation'
 
 const header = 
   () => (

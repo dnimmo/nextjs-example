@@ -1,5 +1,6 @@
 .siteNavigation {
   background-color: #321f3e;
+  transition: all linear 0.3s;
 
   a {
     border-bottom: 1px solid #fff;
@@ -7,7 +8,7 @@
     display: block;
     padding: 20px;
     text-decoration: none;
-    transition: all linear .3s;
+    transition: height linear .3s;
 
     &:hover {
       background-color: #fff;
@@ -25,8 +26,8 @@
     }
   }
 
-  .closed {
-    height: 0;
+  &.closed {
+    display: none;
   }
 
   @include bp(l) {
@@ -35,7 +36,7 @@
     top: 0;
 
     &.closed {
-      height: 100%;
+      display: block;
     }
   }
 }

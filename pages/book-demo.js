@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import PageHead from '../components/common/pageHead'
-import Header from '../components/common/header'
-import Footer from '../components/common/footer'
+import PageHead from '../components/common/PageHead'
+import Header from '../components/common/Header'
+import Footer from '../components/common/Footer'
 
 const page = 
   () => (

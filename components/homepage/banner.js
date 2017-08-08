@@ -1,4 +1,4 @@
-import BannerButton from './bannerButton'
+import BannerButton from './BannerButton'
 import nextConnect, { loggedIn } from '../../state/store'
 
 const banner = 
