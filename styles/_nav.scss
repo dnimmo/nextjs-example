@@ -1,3 +1,9 @@
+.navButton {
+  @include bp(l) {
+    display: none;
+  }
+}
+
 .siteNavigation {
   background-color: #321f3e;
   transition: all linear 0.3s;
